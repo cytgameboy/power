@@ -7,12 +7,19 @@
 //
 
 #include <iostream>
-
-int main(int argc, const char * argv[])
+using namespace std;
+double power(double x,int y)
 {
-
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    if(y==0) return 1.0;
+    else return power(x,y-1)*x;
+    
+    }
+int main()
+{
+    int y;
+    double x;
+    cin>>x;
+    cin>>y;
+    cout<<power(x,y)<<endl;
     return 0;
 }
-
